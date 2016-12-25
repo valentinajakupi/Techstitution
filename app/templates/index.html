@@ -1,0 +1,489 @@
+<html>
+<head>
+
+	<head>
+
+		<title>Formulari</title>
+		 <!--Import Google Icon Font-->
+		 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		 <!--Import materialize.css-->
+		 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='materialize.min.css') }}">
+		 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+		 <!--Let browser know website is optimized for mobile-->
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body class="container">
+	<div id="wrapper">
+	{%block images%}
+	<img id="logo" src="{{ url_for('static', filename='images/logo.png')}}"><br><br>
+	{%endblock%}
+	 <font color="#ffffff"><p id="nentitulli">Formular i Njoftimit per Hyrje ne aktivitetin e Komunikimeve Elektronike</p></font>
+
+
+		<form id="formaRegjistrimit" method="POST">
+	    <div class="collection waves-color-demo">
+				<div class="collection-item">
+		    <code  class=" language-markup">TE DHENAT PER NDERMARRESIN: </code>
+            <a href="#!" id="ploteso1" class="waves-effect waves-light grey darken-3 btn secondary-content" style="text-shadow: 0 2px 0 black;">
+						&nbsp;&nbsp;&nbsp;&nbsp;Hapi i Pare 1	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+				 </div>
+				 <br>
+				 <div id="form1">
+					 <div class="input-field col s6">
+						 <input placeholder="Emri i Ndermarresit" name="emri_ndermarresit" type="text" class="validate">
+			 		</div>
+					<div class="input-field col s6">
+			 		 <input placeholder="Numri i Regjistrimit te Biznesit" name="nr_biznesit" type="text" class="validate">
+			 	 </div>
+			 <div class="input-field col s6">
+				 <input placeholder="Numri Fiskal" name="nr_fiskal" type="text" class="validate">
+			 </div>
+			 <div class="input-field col s6">
+				 <input placeholder="adresa " name="adresa" type="text" class="validate">
+			 </div>
+			 <div class="input-field col s6">
+				 <input placeholder="Numri i Telefonit " name="nr_tel" type="text" class="validate">
+			 </div>
+			 <div class="input-field col s6">
+				 <input placeholder="Numri i Faksit " name="nr_faks" type="text" class="validate">
+			 </div>
+			 <div class="input-field col s6">
+				 <input placeholder="Email Adresat " name="email" type="text" class="validate">
+				 <br><br><br>
+			 </div>
+		 </div>
+
+				 			<div class="collection-item">
+				 			<code  class=" language-markup">TE DHENAT PER ZYRTARIN LIGJERISHT TE PERGJEGJESHEM: </code>
+							<a href="#!" id="ploteso2" class="waves-effect waves-light grey darken-3 btn secondary-content" style="text-shadow: 0 2px 0 black;">Vazhdo ne Hapin 2 </a>
+						</div>
+				 <br>
+							<div id="form2">
+							<div class="input-field col s6">
+								<input placeholder="Email i zyrtarit " name="emri_zyrtarit" type="text" class="validate">
+						</div>
+						<div class="input-field col s6">
+							<input placeholder="Adresa " name="adresa_2" type="text" class="validate">
+						</div>
+						<div class="input-field col s6">
+							<input placeholder="Numri i Telefonit " name="nr_tel2" type="text" class="validate">
+						</div>
+						<div class="input-field col s6">
+							<input placeholder="Numri i Faksit " name="nr_faks2" type="text" class="validate">
+						</div>
+						<div class="input-field col s6">
+							<input placeholder="Email adresa  " name="email2" type="text" class="validate">
+						</div>
+						<div class="input-field col s6">
+							<input placeholder="NUmri i ID " name="nr_ID" type="text" class="validate"><br><br><br>
+						</div>
+					</div>
+
+					 <div class="collection-item">
+					<code  class=" language-markup" >AKTIVITETET TE CILAT NJOFTOHEN/CREGJISTROHEN: </code>
+							 <a href="#!" id="ploteso3" class="waves-effect waves-light grey darken-3 btn secondary-content" style="text-shadow: 0 2px 0 black;">Vazhdo ne hapin 3 </a>
+						</div>
+						<br>
+						<div id="form3" action="#">
+				  <table id="tabela">
+
+				    <thead>
+				      <tr>
+
+				        <th>Aktiviteti</th>
+				        <th>Lloji</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>Ofrimi i rrjetit publik fiks</td>
+				        <td>
+									<label>
+										<input type="checkbox" name="availability" class="filled-in checkbox-orange" id="filled-in-box1" />
+										<label for="filled-in-box1">Lokal</label><br>
+										<input type="checkbox" name="availability" class="filled-in checkbox-orange" id="filled-in-box2" />
+											<label for="filled-in-box2">Nacional</label><br>
+											<input type="checkbox" name="availability" class="filled-in checkbox-orange" id="filled-in-box3"  />
+												<label for="filled-in-box3">Tjera ( Specifikoj )</label>
+											</label>
+								</td>
+							</tr>
+				    </tbody><br>
+						<tbody>
+							<tr>
+								<td>Ofrimi i sherbimeve publike fikse</td>
+								<td>
+									<label>
+										<input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box4" />
+										<label for="filled-in-box4"> Sherbime telefonike lokale/nacionale</label>
+									</label>
+									<br>
+									<label>
+										<input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box5"  />
+											<label for="filled-in-box5">Sherbime telefonike nderkombetare</label>
+										</label>
+										<br>
+										<label>
+											<input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box6" />
+												<label for="filled-in-box6">Telefona publik me pagese</label>
+											</label>
+												<br>
+											<label>
+												<input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box7"  />
+													<label for="filled-in-box7">Sherbime Tjera ( specifikoj )</label>
+												</label>
+											</td>
+										</tr>
+									</tbody>
+									<tbody>
+							<tr>
+								<td>Ofrimi i rrjetit publik mobil</td>
+								<td>
+									<label>
+										<input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box8"  />
+										<label for="filled-in-box8"> Lokal</label>
+									</label>
+									<br>
+									<label>
+										<input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box9" />
+											<label for="filled-in-box9"> Nacional</label>
+										</label>
+								</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td>Ofrimi i sherbimeve publike mobile</td>
+								<td>
+									<label>
+										<input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box10"/>
+										<label for="filled-in-box10">  Sherbime telefonike te zerit</label>
+									</label>
+									<br>
+									<label>
+										<input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box11"  />
+											<label for="filled-in-box11">Transmetim te dhenash</label>
+										</label>
+								</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td>Ofrimi i sherbimeve te linjave me qira</td>
+								<td>
+									<label>
+										<input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box12"  />
+										<label for="filled-in-box12">  Fiber optik te pa-ndriquar</label>
+									</label>
+									<br>
+									<label>
+										<input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box13"  />
+											<label for="filled-in-box13">	Linja tjera me qira</label>
+										</label>
+								</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td>Ofrimi i rrjetave publike me transmetim satelitor</td>
+								<td>
+									<label>
+										<input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box14"  />
+										<label for="filled-in-box14">   Ofrimi i rrjetave publike me transmetim satelitor</label>
+									</label>
+								</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td>Ofrimi i sherbimeve te transmetimit te te dhenave (Internetit)</td>
+								<td>
+									<label>
+										<input type="checkbox" class="filled-in checkbox-orange" name="checkii" id="filled-in-box15"  />
+										<label for="filled-in-box15"> Ofrimi i sherbimeve publike te transmetimit te te dhenave (internetit)</label>
+									</label>
+								</td>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<td>Ofrimi i sherbimeve me vlere te shtuar</td>
+								<td>
+									<label>
+										<input type="checkbox" class="filled-in checkbox-orange" id="filled-in-box16" />
+										<label for="filled-in-box16"> Ofrimi i sherbimeve me vlere te shtuar</label><br><br><br>
+									</label>
+								</td>
+							</tr>
+						</tbody>
+				  </table>
+				</div>
+
+				<div class="collection-item">
+			 <code  class=" language-markup" >PERSHKRIMI I AKTIVITETIT DHE FAZA E OFRIMIT </code>
+						<a href="#!" id="ploteso4" class="waves-effect waves-light grey darken-3 btn secondary-content" style="text-shadow: 0 2px 0 black;">Vazhdo ne hapin 4</a>
+				 </div>
+				 <br>
+				 <div id="form4" action="#">
+					 <span id="pershkrimi">  Pershkrimi i rrjetit dhe/ose sherbimit qe do te ofrohet:</span><br>
+					 <span id="pershkrimi2"> ( Te jepen pershkrime te detajuara per secilin aktivitet te njoftuar duke specifikua )</span>
+					 <div id="majtas">
+					<ul>
+							 <li>A do te perdoret rrjeti vetanak apo ndonje rrjet tjeter,</li>
+							 <li>Teknologjia e cila do te perdoret,</li>
+							 <li>Radio frekuencat, te cilat planifikohen te perdoren</li>
+						 <li>Lista e sherbimeve qe planifikohen te ofrohen,</li>
+						 <li>te tjera...</li>
+						 </ul>
+
+					 </div>
+					 <div id="djathtas">
+						 <textarea id="txta1" placeholder="( Te jepen pershkrime te detajuara per secilin aktivitet te njoftuar duke specifikua )"></textarea>
+					 </div>
+				<br><br><br><br><br><br><br><br><br><br>	 </div>
+
+			 <div class="collection-item">
+	 <code  class=" language-markup">DOKUMENTAT E BASHKANGJITURA: </code>
+					 <a href="#!" id="ploteso5" class="waves-effect waves-light grey darken-3 btn secondary-content" style="text-shadow: 0 2px 0 black;">Vazhdo ne hapin 5 </a>
+				</div>
+				<br>
+				<div id="form5">
+					<div class="row">
+		<div class="col s12">
+			 <div class="row">
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;<font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kopje e Certifikates se Regjistrimit te Biznesit</font></label><br><br>
+					<div class="file-field input-field">
+						 <div class="waves-light grey darken-3 btn">
+								<span> Ngarko</span>
+								<input type="file">
+						 </div>
+						 <div class="file-path-wrapper">
+								<input class="file-path validate" type="text" placeholder="Ngarko Kopjen e Certifikates se Regjistrimit te Biznesit">
+						 </div>
+					</div>
+			 </div>
+			 <div class="row">
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;<font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kopje e Certifikates se Numrit Fiskal</font></label><br><br>
+					<div class="file-field input-field">
+						 <div class="waves-light grey darken-3 btn">
+								<span> Ngarko</span>
+								<input type="file">
+						 </div>
+						 <div class="file-path-wrapper">
+								<input class="file-path validate" type="text" placeholder="Ngarko kopjen e Certifikates se Numrit Fiskal">
+						 </div>
+					</div>
+			 </div>
+			 <div class="row">
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;<font color="black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kopje e Dokumentit , Informate mbi biznesin</font></label><br><br>
+					<div class="file-field input-field">
+						 <div class="waves-light grey darken-3 btn">
+								<span> Ngarko</span>
+								<input type="file">
+						 </div>
+						 <div class="file-path-wrapper">
+								<input class="file-path validate " type="text" placeholder="Ngarko kopjen e Dokumentit , Informaten mbi Biznes">
+						 </div>
+					</div>
+			 </div>
+				<br><br><br>
+			</div>
+		</div>
+
+		<div class="collection waves-color-demo">
+			<div class="collection-item">
+			<code  class=" language-markup">KONFIRMIMI I NJOFTIMIT: </code>
+					<a href="#!" id="ploteso6" class="waves-effect waves-light grey darken-3 btn secondary-content" style="text-shadow: 0 2px 0 black;">Vazhdo ne hapin 6  </a>
+			 </div>
+			 <br>
+			 <div id="form6">
+				 <div class="row">
+					 <span id="forma6">&nbsp;&nbsp;&nbsp; Ndermarrja kerkon qe ti leshohet certifikata e konfirmimit te njoftimit	 per ofrimin e rrjeteve</span>
+						<span> &nbsp;&nbsp;&nbsp;&nbsp;dhe/ose  sherbimeve publike te komunikimeve elektronike te njoftuara permes ketij formulari: </span><br>
+						 <div class="cakto">
+							 <br>
+							 <input type="checkbox" id="PO" />
+						 <label for="PO" id="PO-label">PO</label>
+						 <input type="checkbox" id="JO" />
+					 <label for="JO" id="JO-label">JO</label>
+	 							 </div>
+							 </div><br>
+
+  <p><input class="with-gap" name="group1" type="radio" id="test5"/>
+    <label  id="pranoj" for="test5">&nbsp;&nbsp;&nbsp;&nbsp;Pranoj Kushtet duke klikuar <a id="ketu"> KETU</a></label>
+  </p>
+
+<br>
+<button class="grey darken-3 btn first-content" onsubmit="return validate()" style="text-shadow: 0 2px 0 black;"  <a href="test.html" id="submit" type="submit">Dergo</button></a>
+	</div>
+		</div>
+      </div>
+				</div>
+				<div id="#triangle-bottomright"></div>
+				<div id="footer">
+					<p id="footercr" style="text-align:center">Të gjitha të drejtat e rezervuara <hr></p>
+					<p id="footercr" style="text-align:center">	Autoriteti Rregullativ i Komunikimeve Elektronike dhe Postare 2012</p>
+				</div>
+
+					</form>
+							</div>
+							<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+						 <script type="text/javascript" src="{{url_for('static' , filename='materialize.min.js')}}"></script>
+						 <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+						 <script type="text/javascript" src="{{ url_for('static', filename='jqueryvalidation.js') }}">
+
+
+						 </script>
+<script type="text/javascript">
+
+</script>
+			<script>
+$(document).ready(function(){
+	$('INPUT[type="file"]').change(function () {
+    var ext = this.value.match(/\.(.+)$/)[1];
+    switch (ext) {
+        case 'jpg':
+				case 'pdf':
+        case 'jpeg':
+        case 'png':
+        case 'gif':
+            $('#submit').attr('disabled', false);
+            break;
+        default:
+            alert('Ky Fajll nuk eshte i Lejuar nga Serveri.');
+            this.value = '';
+    }
+});
+    $("#ploteso1").click(function(){
+        $("#form1").slideToggle("slow");
+    });
+		$("#ploteso2").click(function(){
+				$("#form2").slideToggle("slow");
+		});
+		$("#ploteso3").click(function(){
+			$("#form3").slideToggle("slow");
+		});
+		$("#ploteso4").click(function(){
+			$("#form4").slideToggle("slow");
+		});
+		$("#ploteso5").click(function(){
+			$("#form5").slideToggle("slow");
+		});
+		$("#ploteso6").click(function(){
+			$("#form6").slideToggle("slow");
+		});
+		$("#ketu").click(function(){
+			alert("une nepermjet ketij dokumenti deklaroj se do te ushtroj aktivitet ne fushen e komunikimeve elektronike te shenuara me siper dhe aplikoj per regjistrim ne regjistrin e ofruesve te rrjeteve dhe sherbimeve te  komunikimeve elektronike te Autoritetit (ARKEP). une permes ketij dokumenti deklaroj se kam mbyllur aktivitetet e komunikimeve elektronike te shenuara me siper une nepermjet ketij dokumenti deklaroj se kam mbyllur qdo aktivitet te komunikimeve elektronike nen regjimin e Autorizimit te pergjithshem. une nepermjet ketij dokumenti deklaroj se te dhenat e mia kane pesuar ndryshime , sikurse pershkruhen ne formular. une nepermjet ketij dokumenti deklaroj se kam ndryshuar formen ligjore te ndermarrjes sime siq pershkruhet ne formular. Emri i vjeter eshte si me poshte. ");
+		});
+
+});
+$(document).ready(function(){
+
+ $("#formaRegjistrimit").validate({
+ rules: {
+   emri_ndermarresit: {
+     required: true,
+     minlength: 3,
+   } ,
+	 nr_biznesit: {
+		 required: true ,
+		 minlength: 4 ,
+	 },
+	 adresa: {
+		 required: true ,
+		 minlength:5 ,
+	 },
+	 nr_tel: {
+		 required: true ,
+		 minlength: 9 ,
+	 } ,
+	 nr_faks: {
+		 required: true ,
+		 minlength: 5 ,
+	 } ,
+	 email:{
+		 required: true,
+		 email: true ,
+	 } ,
+	 emri_zyrtarit: {
+		 required: true ,
+		 minlength: 3 ,
+	 },
+	 adresa_2: {
+		 required: true ,
+		 minlength: 5 ,
+	 },
+	 nr_tel2: {
+		 required: true ,
+		 minlength: 9 ,
+	 },
+	 nr_faks2: {
+		 required: true ,
+		 minlength: 5 ,
+	 } ,
+	 email2: {
+		 required: true ,
+		 email: true ,
+	 } ,
+	 nr_ID: {
+		 required: true ,
+		 minlength: 4 ,
+	 } ,
+	 nje: {
+		 required: true ,
+	 } ,
+
+},
+ messages: {
+					 emri_ndermarresit:{
+							 required: "Ju Lutemi , Shkruani emrin e Ndermarresit",
+							 minlength: "Na falni ju duhet ti shtypni me shume se 3 karaktere" ,
+							 success: "Ju keni mbushur fushen me sukses "
+					 },
+					 nr_biznesit:{
+						 required: "Ju Lutemi , Shkruani numrin e biznesit  " ,
+						 minlength: "Na falni ju duhet ti shtypni me shume se 4 numra"
+					 },
+					 adresa: {
+						 required: " Ju lutemi , Shtypeni adresen ",
+						 minlength: " Na falni ju duhet ti shtypni me shum se 5 karaktere"
+					 },
+					 nr_tel:{
+						 required: " Ju lutemi , Shtypeni numrin e telefonit",
+						 minlength: " Na falni ju duhet ti shtypni me se paku 9 numra"
+					 },
+					 nr_faks:{
+						 required: " Ju lutemi , Shtypeni numrin e faksit" ,
+						 minlength: " Na falni ju duhet ti shtypni me se paku 5 numra"
+					 },
+					 email:{
+						 required: " Ju lutemi , Shtypeni numrin e faksit " ,
+						 email: " Ju lutemi , Shtypeni nje email adress valide "
+					 	},
+						emri_zyrtarit:{
+							required: " Ju lutemi , Shtypeni emrin e zyrtarit " ,
+							minlength: "Na falni ju duhet ti shtypni me se paku 3 karaktere"
+						},
+						adresa_2: {
+							required: " Ju lutemi  , Shtypeni adresen " ,
+							minlength: " Na falni ju duhet ti shtypni me shume se 5 karaktere"
+						},
+						nr_tel2: {
+							required: " Ju lutemi , Shtypeni adresen " ,
+							minlength:  " Na falni ju duhet ti shtypeni me shume se 9 numra "
+						},
+						email2:{
+							required: " Ju lutemi , Shtypeni numrin e faksit " ,
+							email: " Ju lutemi , Shtypeni nje email adress valide "
+						 },
+						 nr_ID:{
+							 required: " Ju lutemi , Shtypeni numrin e ID-se" ,
+							 minlength: " Na falni ju duhet ti shtypni me se paku 4 numra"
+						 },
+				 }
+});
+});
+</script>
+   </body>
+</html>
